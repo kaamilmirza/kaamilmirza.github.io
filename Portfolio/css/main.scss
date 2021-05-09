@@ -223,7 +223,7 @@ img{
     }
    
     .fusion{
-         
+        margin-top: 30px;
         padding-left: 40px;
         margin-left : 40px;
         padding-right: 40px;
@@ -379,7 +379,7 @@ img{
     
     margin-top: 40px;
     margin-left: 40px;
-    margin-right: 40px;
+    
     margin-bottom: 40px;
     
     h2{
@@ -393,22 +393,31 @@ img{
 
  tag3{
     background-color: #0C38B1; 
-  border-radius: 30px; 
+    border-radius: 30px; 
      margin-left: 20px;
      padding-left: 20px;
      display: flex;
-     justify-content: center;
+     flex-direction: column;
      transition: 2s;
-    
-    img{
-       padding-top: 10px;
-        
+    .edtext{
+        display: flex;
         flex-direction: row;
+        padding-left: 30px;
+       
+    }
+    span{
+        display: flex;
+
+    }
+    img{
+        
+        width: 10%;
+       padding-top: 10px;
+    
     }
     P1,P2,P3,P4{
-        text-align: center;
-        display: flex;
-        flex-direction: column;
+        inline-size: auto;
+        padding-left: 30px;
         padding-top: 100px;
         color: #ffffff;
          }
@@ -696,7 +705,7 @@ input[type=submit]:hover {
                 font-size: 30px;
                 color:white
             }
-            padding-left: 40px;
+        padding-left: 40px;
         margin-left : 40px;
         padding-right: 40px;
         margin-right: 40px;
@@ -722,7 +731,7 @@ input[type=submit]:hover {
         
         }
         .fusion{
-            
+            margin-top: 30px;
             h3{
                 font-size: 20px;
             }

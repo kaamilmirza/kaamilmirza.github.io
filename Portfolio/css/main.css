@@ -263,6 +263,7 @@ img {
 }
 
 .projectsection .fusion {
+  margin-top: 30px;
   padding-left: 40px;
   margin-left: 40px;
   padding-right: 40px;
@@ -439,7 +440,6 @@ img {
 .education {
   margin-top: 40px;
   margin-left: 40px;
-  margin-right: 40px;
   margin-bottom: 40px;
 }
 
@@ -458,30 +458,39 @@ img {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-transition: 2s;
-  transition: 2s;
-}
-
-.education tag3 img {
-  padding-top: 10px;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-}
-
-.education tag3 P1, .education tag3 P2, .education tag3 P3, .education tag3 P4 {
-  text-align: center;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  -webkit-transition: 2s;
+  transition: 2s;
+}
+
+.education tag3 .edtext {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  padding-left: 30px;
+}
+
+.education tag3 span {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.education tag3 img {
+  width: 10%;
+  padding-top: 10px;
+}
+
+.education tag3 P1, .education tag3 P2, .education tag3 P3, .education tag3 P4 {
+  inline-size: auto;
+  padding-left: 30px;
   padding-top: 100px;
   color: #ffffff;
 }
@@ -837,6 +846,9 @@ input[type=submit]:hover {
     color: white;
     padding-bottom: 10px;
     font-size: 10px;
+  }
+  .projectsection .fusion {
+    margin-top: 30px;
   }
   .projectsection .fusion h3 {
     font-size: 20px;
