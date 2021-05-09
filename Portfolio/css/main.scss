@@ -141,10 +141,10 @@ img{
 
 .aboutsection{
     display: flex;
-    flex-direction: flex;
+    flex-direction: row;
     padding : 40px 40px;
     img{
-        width: 30%;
+        width: 60%;
     }
     p{
         
@@ -156,6 +156,37 @@ img{
 }
 
 .projectsection{
+   
+    .twitterdata{
+        h3{
+            font-size: 30px;
+            color:white
+        }
+        padding-left: 40px;
+    margin-left : 40px;
+    padding-right: 40px;
+    margin-right: 40px;
+    text-align: center;
+       margin-bottom: 50px;
+    background-color: #0C38B1;
+  border-radius: 30px;
+    margin-top: 50px;
+    transition: 1s;
+    .twitterdatacontent{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        img{
+            width: 500%;
+        }
+        p{
+            color : white;
+            padding-bottom: 10px;
+            font-size: 20px;
+        }
+    }
+    
+    }
     .more{
         text-align: right;
         padding-right: 50px;
@@ -184,7 +215,7 @@ img{
         transform: scale(0.9);
         transition: 1s;
     }
-    .snake:hover , .twitter:hover , .pwned:hover{
+    .snake:hover , .twitter:hover , .pwned:hover, .twitterdata:hover{
         -webkit-transform: scale(0.9);
         -ms-transform: scale(0.9);
         transform: scale(0.9);
@@ -212,9 +243,8 @@ img{
         .fcontent{
           
          img{
-            border-bottom-left-radius: 30px;
              padding-top: 20px;
-             width: 50%;
+             width: 100%;
          }
              display: flex;
              flex-direction: row;
@@ -277,9 +307,11 @@ img{
          display: flex;
          flex-direction: row;
          p{
+             font-size: 20px;
              color : white;
              margin : auto;
          }
+         padding-bottom: 10px;
      }
  }
  .snake, .pwned{
@@ -297,8 +329,19 @@ img{
         font-size: 40px;
         color: #ffffff;
     }
+
+    .pcontent{
+        display : flex;
+        flex-direction: row;
+        p{
+            margin : auto auto;
+            color: white;
+            font-size: 20px;
+        }
+    }
+    
    
-    .sconten, .tconten, .pcontent{
+    .sconten{
        
      img{
         border-bottom-left-radius: 30px;
@@ -310,14 +353,20 @@ img{
          p{
              margin: auto;
              display: flex;
-             font-size: 30px;
+             font-size: 20px;
              text-align: center;
              
              color: #ffffff;
          }
      }
-    }
+  
+
+     
 }
+}
+
+
+
      
 
    .education tag3:hover{
@@ -547,15 +596,16 @@ input[type=submit]:hover {
     transform: scale(0.95);
     transition: 2s;
 }
-@media only screen and (max-width:700px){
-    
-    body{
-        font-family: 'Lato' , 'sans-serif';
-        line-height: 1.6;
-        width: 100%;
-        height: auto;
-        margin: 0;
-    }
+@media only screen and (max-width:900px){
+    html,body
+{
+    width: 100%;
+    height: 100%;
+    margin: 0px;
+    padding: 0px;
+    overflow-x: hidden; 
+}
+
     ul{
         list-style-type: none;
     }
@@ -570,9 +620,7 @@ input[type=submit]:hover {
     h1,h2{
         text-align: center;
     }
-    img{
-        width: 100%;
-    }
+   
 
     .mainhead{
         h1{
@@ -584,13 +632,23 @@ input[type=submit]:hover {
         display: flex;
         margin-top : auto;
         margin-bottom: auto;
-        width: 50%;
+        width: 80%;
         justify-content: space-between;
         padding-left: 40px;
     }
     .navbar1{
-        
-       display: flex;
+       ul{
+           padding-left: 75px;
+           padding-right: 50px;
+          
+           display: flex;
+           flex-direction: row;
+           justify-content: space-between;
+           a{
+               font-size: 13px;
+               margin: auto auto;
+           }
+       }
        
         li{transition: 1s;
             margin: auto auto;
@@ -616,27 +674,72 @@ input[type=submit]:hover {
         img{
             margin: auto auto;
             align-content: center;
-            width: 10%;
+            width: 40%;
             height: auto;
             
         }
         p{
             padding-top: 20px;
             text-align: center;
+            font-size: small;
             
            }
     }
     .projectsection{
+      
         h2{
             text-align: center;
         }
+
+        .twitterdata{
+            h3{
+                font-size: 30px;
+                color:white
+            }
+            padding-left: 40px;
+        margin-left : 40px;
+        padding-right: 40px;
+        margin-right: 40px;
+        text-align: center;
+           margin-bottom: 50px;
+        background-color: #0C38B1;
+      border-radius: 30px;
+        margin-top: 50px;
+        transition: 1s;
+        .twitterdatacontent{
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            img{
+                width: 100%;
+            }
+            p{
+                color : white;
+                padding-bottom: 10px;
+                font-size: 10px;
+            }
+        }
+        
+        }
         .fusion{
+            
             h3{
                 font-size: 20px;
             }
+           
         .fcontent{
+           padding-bottom: 20px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
             p{
+            margin: auto auto;
             font-size: 10px;
+        }
+        img{
+            margin: auto auto;
+            border-bottom-left-radius: 0px;
+            width: 100%;
         }
     }
     }
@@ -651,12 +754,18 @@ input[type=submit]:hover {
         }
         .tconten{
             display: flex;
-            p{   margin: auto auto;
-                font-size: 15px;
+            flex-direction: column-reverse;
+            p{   
+                margin: auto auto;
+                font-size: 10px;
+            }
+            img{
+                width: 100%;
             }
         }
     }
     .snake{
+
         h3{
             font-size: 20px;
             span{
@@ -664,24 +773,83 @@ input[type=submit]:hover {
             }
         }
         .sconten{
+            display: flex;
+            flex-direction: column;
+            padding-bottom: 20px;
             p{
                 font-size: 10px;
             }
+            img{
+                border-bottom-left-radius: 0px;
+                width: 100%;
+            
+            }
         }
     }
-}
+    .twitter{
+        h3{
+            font-size: 20px;
+        }
+        .tcontent{
+        display: flex;
+        flex-direction: column;
+        padding-bottom: 20px;
+      
+            span{
+                font-size: 10px;
+             }
+    
+            p{
+                font-size: 10px;
+            }
+            img{
+                border-bottom-left-radius: 0px;
+                width: 100%;
+            
+            }
+        }
+    }
+        .pwned{
+            
+            h3{
+                font-size: 20px;
+            }
+            .pcontent{
+                
+                display: flex;
+                flex-direction: column;
+                p{
+                    padding-top: 20px;
+                    font-size: 10px;
+                }
+            
+            img{
+                width: 100%;
+                border-bottom-left-radius: 0px;
+                     }
+                     
+                }
+            padding-bottom: 0px; 
+            }
+            .more{
+                p{
+                    font-size: 10px;
+                    color: white;
+                }
+            }
+        
+    }
+    
 
 .skillsinterest{
-    padding-left :20px;
-    margin-left: 30px;
-    padding-right: 20px;
-    margin-right : 20px;
-    text-align: center;
+   margin : auto auto;
+
     p{  
-        margin-left: 30px;
-        padding-left: 30px;
-        text-align: center;
-        
+        padding-top: 10px;
+        font-size: 20px;
+        }
+    span{
+        font-size: 10px;
     }
 }
 .insp{
@@ -694,14 +862,21 @@ input[type=submit]:hover {
     }
 }
 .education{
-    padding-top: 50px;
-    h3{
-        text-align: center;
+    h2{
+        padding-right: 20px;
     }
+   tag3{
+
+    padding-bottom: 10px;
+   }
     .edtext{
-       p{
+       display: flex;
+       flex-direction: column;
+       P1,P2,P3,P4{
+           margin : auto auto;
+            padding-top: 15px;
            text-align: center;
-           margin: auto auto;
+           
        }
         img{
             width: 20%;
@@ -713,15 +888,16 @@ input[type=submit]:hover {
 
     
     .music{
-        display: flex;
-        flex-direction: column;
-        margin: 10px auto;
-       
-        justify-content: center;
+        display: grid;
+        grid-column: auto;
         .sc,.spotify,.sc2,.sc3{
-            margin : 10px auto;
-            display: flex;
-            overflow: hidden;
+            
+            margin: auto auto;
+            iframe{
+
+                margin: 0 0;
+            }
+           
         }
         
     }

@@ -163,15 +163,15 @@ img {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
+  -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
-      -ms-flex-direction: flex;
-          flex-direction: flex;
+      -ms-flex-direction: row;
+          flex-direction: row;
   padding: 40px 40px;
 }
 
 .aboutsection img {
-  width: 30%;
+  width: 60%;
 }
 
 .aboutsection p {
@@ -182,6 +182,48 @@ img {
 
 .projectsection {
   color: #0C38B1;
+}
+
+.projectsection .twitterdata {
+  padding-left: 40px;
+  margin-left: 40px;
+  padding-right: 40px;
+  margin-right: 40px;
+  text-align: center;
+  margin-bottom: 50px;
+  background-color: #0C38B1;
+  border-radius: 30px;
+  margin-top: 50px;
+  -webkit-transition: 1s;
+  transition: 1s;
+}
+
+.projectsection .twitterdata h3 {
+  font-size: 30px;
+  color: white;
+}
+
+.projectsection .twitterdata .twitterdatacontent {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.projectsection .twitterdata .twitterdatacontent img {
+  width: 500%;
+}
+
+.projectsection .twitterdata .twitterdatacontent p {
+  color: white;
+  padding-bottom: 10px;
+  font-size: 20px;
 }
 
 .projectsection .more {
@@ -213,7 +255,7 @@ img {
   transition: 1s;
 }
 
-.projectsection .snake:hover, .projectsection .twitter:hover, .projectsection .pwned:hover {
+.projectsection .snake:hover, .projectsection .twitter:hover, .projectsection .pwned:hover, .projectsection .twitterdata:hover {
   -webkit-transform: scale(0.9);
   transform: scale(0.9);
   -webkit-transition: 1s;
@@ -249,9 +291,8 @@ img {
 }
 
 .projectsection .fusion .fcontent img {
-  border-bottom-left-radius: 30px;
   padding-top: 20px;
-  width: 50%;
+  width: 100%;
 }
 
 .projectsection .fusion .fcontent p {
@@ -319,9 +360,11 @@ img {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
+  padding-bottom: 10px;
 }
 
 .projectsection .twitter .tcontent p {
+  font-size: 20px;
   color: white;
   margin: auto;
 }
@@ -344,7 +387,7 @@ img {
   color: #ffffff;
 }
 
-.projectsection .snake .sconten, .projectsection .snake .tconten, .projectsection .snake .pcontent, .projectsection .pwned .sconten, .projectsection .pwned .tconten, .projectsection .pwned .pcontent {
+.projectsection .snake .pcontent, .projectsection .pwned .pcontent {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -354,18 +397,34 @@ img {
           flex-direction: row;
 }
 
-.projectsection .snake .sconten img, .projectsection .snake .tconten img, .projectsection .snake .pcontent img, .projectsection .pwned .sconten img, .projectsection .pwned .tconten img, .projectsection .pwned .pcontent img {
+.projectsection .snake .pcontent p, .projectsection .pwned .pcontent p {
+  margin: auto auto;
+  color: white;
+  font-size: 20px;
+}
+
+.projectsection .snake .sconten, .projectsection .pwned .sconten {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+.projectsection .snake .sconten img, .projectsection .pwned .sconten img {
   border-bottom-left-radius: 30px;
   padding-top: 20px;
   width: 50%;
 }
 
-.projectsection .snake .sconten p, .projectsection .snake .tconten p, .projectsection .snake .pcontent p, .projectsection .pwned .sconten p, .projectsection .pwned .tconten p, .projectsection .pwned .pcontent p {
+.projectsection .snake .sconten p, .projectsection .pwned .sconten p {
   margin: auto;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  font-size: 30px;
+  font-size: 20px;
   text-align: center;
   color: #ffffff;
 }
@@ -645,13 +704,13 @@ input[type=submit]:hover {
   transition: 2s;
 }
 
-@media only screen and (max-width: 700px) {
-  body {
-    font-family: 'Lato' , 'sans-serif';
-    line-height: 1.6;
+@media only screen and (max-width: 900px) {
+  html, body {
     width: 100%;
-    height: auto;
-    margin: 0;
+    height: 100%;
+    margin: 0px;
+    padding: 0px;
+    overflow-x: hidden;
   }
   ul {
     list-style-type: none;
@@ -667,9 +726,6 @@ input[type=submit]:hover {
   h1, h2 {
     text-align: center;
   }
-  img {
-    width: 100%;
-  }
   .mainhead h1 {
     font-size: 20px;
   }
@@ -679,16 +735,29 @@ input[type=submit]:hover {
     display: flex;
     margin-top: auto;
     margin-bottom: auto;
-    width: 50%;
+    width: 80%;
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between;
     padding-left: 40px;
   }
-  .navbar1 {
+  .navbar1 ul {
+    padding-left: 75px;
+    padding-right: 50px;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  .navbar1 ul a {
+    font-size: 13px;
+    margin: auto auto;
   }
   .navbar1 li {
     -webkit-transition: 1s;
@@ -721,21 +790,78 @@ input[type=submit]:hover {
     margin: auto auto;
     -ms-flex-line-pack: center;
         align-content: center;
-    width: 10%;
+    width: 40%;
     height: auto;
   }
   .aboutsection p {
     padding-top: 20px;
     text-align: center;
+    font-size: small;
   }
   .projectsection h2 {
     text-align: center;
   }
+  .projectsection .twitterdata {
+    padding-left: 40px;
+    margin-left: 40px;
+    padding-right: 40px;
+    margin-right: 40px;
+    text-align: center;
+    margin-bottom: 50px;
+    background-color: #0C38B1;
+    border-radius: 30px;
+    margin-top: 50px;
+    -webkit-transition: 1s;
+    transition: 1s;
+  }
+  .projectsection .twitterdata h3 {
+    font-size: 30px;
+    color: white;
+  }
+  .projectsection .twitterdata .twitterdatacontent {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  .projectsection .twitterdata .twitterdatacontent img {
+    width: 100%;
+  }
+  .projectsection .twitterdata .twitterdatacontent p {
+    color: white;
+    padding-bottom: 10px;
+    font-size: 10px;
+  }
   .projectsection .fusion h3 {
     font-size: 20px;
   }
+  .projectsection .fusion .fcontent {
+    padding-bottom: 20px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
   .projectsection .fusion .fcontent p {
+    margin: auto auto;
     font-size: 10px;
+  }
+  .projectsection .fusion .fcontent img {
+    margin: auto auto;
+    border-bottom-left-radius: 0px;
+    width: 100%;
   }
   .projectsection .tictac h3 {
     text-align: center;
@@ -749,10 +875,17 @@ input[type=submit]:hover {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
   }
   .projectsection .tictac .tconten p {
     margin: auto auto;
-    font-size: 15px;
+    font-size: 10px;
+  }
+  .projectsection .tictac .tconten img {
+    width: 100%;
   }
   .projectsection .snake h3 {
     font-size: 20px;
@@ -760,20 +893,82 @@ input[type=submit]:hover {
   .projectsection .snake h3 span {
     font-size: 10px;
   }
+  .projectsection .snake .sconten {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    padding-bottom: 20px;
+  }
   .projectsection .snake .sconten p {
     font-size: 10px;
   }
+  .projectsection .snake .sconten img {
+    border-bottom-left-radius: 0px;
+    width: 100%;
+  }
+  .projectsection .twitter h3 {
+    font-size: 20px;
+  }
+  .projectsection .twitter .tcontent {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    padding-bottom: 20px;
+  }
+  .projectsection .twitter .tcontent span {
+    font-size: 10px;
+  }
+  .projectsection .twitter .tcontent p {
+    font-size: 10px;
+  }
+  .projectsection .twitter .tcontent img {
+    border-bottom-left-radius: 0px;
+    width: 100%;
+  }
+  .projectsection .pwned {
+    padding-bottom: 0px;
+  }
+  .projectsection .pwned h3 {
+    font-size: 20px;
+  }
+  .projectsection .pwned .pcontent {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .projectsection .pwned .pcontent p {
+    padding-top: 20px;
+    font-size: 10px;
+  }
+  .projectsection .pwned .pcontent img {
+    width: 100%;
+    border-bottom-left-radius: 0px;
+  }
+  .projectsection .more p {
+    font-size: 10px;
+    color: white;
+  }
   .skillsinterest {
-    padding-left: 20px;
-    margin-left: 30px;
-    padding-right: 20px;
-    margin-right: 20px;
-    text-align: center;
+    margin: auto auto;
   }
   .skillsinterest p {
-    margin-left: 30px;
-    padding-left: 30px;
-    text-align: center;
+    padding-top: 10px;
+    font-size: 20px;
+  }
+  .skillsinterest span {
+    font-size: 10px;
   }
   .insp {
     padding-top: 30px;
@@ -784,22 +979,13 @@ input[type=submit]:hover {
     text-align: center;
     padding-right: 10px;
   }
-  .education {
-    padding-top: 50px;
+  .education h2 {
+    padding-right: 20px;
   }
-  .education h3 {
-    text-align: center;
+  .education tag3 {
+    padding-bottom: 10px;
   }
-  .education .edtext p {
-    text-align: center;
-    margin: auto auto;
-  }
-  .education .edtext img {
-    width: 20%;
-    height: auto;
-    margin: auto auto;
-  }
-  .music {
+  .education .edtext {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -807,17 +993,27 @@ input[type=submit]:hover {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
-    margin: 10px auto;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
+  }
+  .education .edtext P1, .education .edtext P2, .education .edtext P3, .education .edtext P4 {
+    margin: auto auto;
+    padding-top: 15px;
+    text-align: center;
+  }
+  .education .edtext img {
+    width: 20%;
+    height: auto;
+    margin: auto auto;
+  }
+  .music {
+    display: -ms-grid;
+    display: grid;
+    grid-column: auto;
   }
   .music .sc, .music .spotify, .music .sc2, .music .sc3 {
-    margin: 10px auto;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    overflow: hidden;
+    margin: auto auto;
+  }
+  .music .sc iframe, .music .spotify iframe, .music .sc2 iframe, .music .sc3 iframe {
+    margin: 0 0;
   }
 }
 /*# sourceMappingURL=main.css.map */
